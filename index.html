@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="p2js.js"></script>
+    <title>
+        FCC-Survey Form
+    </title>
+    <link rel="stylesheet" href="p2css.css">
+</head>
+
+<body>
+    <main id="main">
+        <a href="index.html">
+            <h1 id="title">Football Trial</h1>
+        </a>
+        <p id="description">Conducted by FCC Football Association</p>
+        <form id="survey-form">
+            <label for="Name" id="name-label">Name:</label>
+            <br>
+            <input type="text" id="name" name="Name" placeholder="Enter your Name" required>
+            <br>
+            <label for="Email" id="email-label">Email:</label>
+            <br>
+            <input type="email" id="email" name="Email" placeholder="Eg: xyz@abc.com" required>
+            <br>
+            <label for="Number" id="number-label">Contact No:</label>
+            <br>
+            <input type="number" id="number" name="Number" placeholder="Enter 10-digit number" min="100000000" max="9999999999" required>
+            <br>
+            <label for="dropdown" id="dropdown-label">Select your position</label>
+            <br>
+            <select id="dropdown" required onchange="showDiv(this)">
+                <option disabled selected value>Select Main Position</option>
+                <option value="defense">Defense</option>
+                <option value="midfield">Midfield</option>
+                <option value="forward">Forward</option>
+            </select>
+
+            <p class="p-form">Your Age Group</p>
+            <div id="radioButton">
+                <label class="radiolabels">
+                    <input type="radio" value="below16" name="age" checked>Below 16
+                </label>
+                <br>
+                <label class="radiolabels">
+                    <input type="radio" value="16-30" name="age">Between 16 and 30
+                </label>
+                <br>
+                <label class="radiolabels">
+                    <input type="radio" value="above30" name="age">Above 30
+                </label>
+
+            </div>
+
+            <p class="p-form">Pick your role according to the position</p>
+            <div id="checkbox">
+                <div id="def">
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="gk" name="defense" >Goal Keeper
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="rb" name="defense" class="checkboxlabels">Right Back
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="lb" name="defense" class="checkboxlabels">Left Back
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                        <input type="checkbox" value="cb" name="defense" class="checkboxlabels">Centre Back
+                        </label>
+                </div>
+
+                <div id="mid">
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="dm" name="midfield" class="checkboxlabels">Defensive Midfielder
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="cm" name="midfield" class="checkboxlabels">Center Midfielder
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="lm" name="midfield" class="checkboxlabels">Left Midfielder
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="rm" name="midfield" class="checkboxlabels">Right Midfielder
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="am" name="midfield" class="checkboxlabels">Attacking Midfielder
+                </label>
+                </div>
+
+                <div id="fwd">
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="lwf" name="forward" class="checkboxlabels">Left Wing Forward
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="rwf" name="forward" class="checkboxlabels">Right Wing Forward
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="ss" name="forward" class="checkboxlabels">Second Striker
+                </label>
+                    <br>
+                    <label class="checkboxlabels">
+                    <input type="checkbox" value="cf" name="forward" class="checkboxlabels">Centre Forward
+                </label>
+                </div>
+            </div>
+
+            <p class="p-form">Please provide info about previous professional football experience.</p>
+            <div id="textArea">
+                <textarea id="text" name="text" rows="7" cols="50"></textarea>
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+
+
+        </form>
+        <!--
+            <iframe height="400px" width="400px" class="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7142.676952976232!2d80.3487985!3d26.4770446!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1529733790033" allowfullscreen></iframe>
+        -->
+
+    </main>
+</body>
+
+</html>
